@@ -105,6 +105,10 @@ p {
   margin-bottom: 1.25rem;
   color: var(--clr-grey-5);
 }
+
+.container {
+
+}
 @media screen and (min-width: 800px) {
   h1 {
     font-size: 4rem;
@@ -158,12 +162,14 @@ Counter
 */
 
 main {
-  min-height: 100vh;
+ 
   display: grid;
   place-items: center;
 }
 .container {
   text-align: center;
+  min-height: 100vh;
+  margin-top: 20vh;
 }
 #value {
   font-size: 6rem;
