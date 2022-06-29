@@ -16,14 +16,18 @@ movieDetails.map((movieDetail)=>{
         }
     })
 })
+
 console.log(moviesData)
+
 let search = document.getElementById("search");
 
 search.addEventListener("click", searchMovies);
 
 function searchMovies(e){
     e.preventDefault();
+  
  let searchInput = document.getElementById("movie-search").value.toLowerCase();
+ console.log(searchInput)
     let filteredMovies = moviesData.filter((movie)=>{
         // return movie.title.toLowerCase().includes(searchInput);
         if(movie.title.toLowerCase().includes(searchInput)) {
@@ -45,21 +49,19 @@ function renderMovies(moviesData) {
 
     moviesData.map((movie)=>{
         const{imageUrl, title, cast, year} = movie;
-        let element = document.createElement("div");
-        element.setAttribute("class", "card");
+    
+        let div = document.createElement("div");
+        div.setAttribute("class", "card");
 
-        element.innerHTML = `
+        div.innerHTML = `
             <img src= ${imageUrl} alt=${title}>
             <h2>${title}</h2>
             <p>${cast.join(" ")}</p>
             <p>${year}</p>
         `
         let movies_render = document.getElementById("movies_render");
-        movies_render.append(element)
+        movies_render.append(div)
     })
-
-
-
 }
 
 renderMovies(moviesData);
