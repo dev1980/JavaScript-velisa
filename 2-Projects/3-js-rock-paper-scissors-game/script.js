@@ -25,6 +25,7 @@ function yourSelection(e){
 
 function computerSelection(){
 const randomNumber = Math.floor(Math.random() * 3) + 1
+console.log(randomNumber)
 if(randomNumber === 1) {
     computerTurn = "rock"
     computerChoice.innerText = computerTurn;
@@ -41,6 +42,7 @@ if(randomNumber === 3) {
 }
 
 function displayResult() {
+
 if(yourTurn === computerTurn){
     result = "Draw"
 }
