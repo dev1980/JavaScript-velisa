@@ -44,7 +44,7 @@ Display.prototype.add = function(book) {
                 <p>${book.name}</p>
                 <p>${book.author}</p>
                 <p>${book.type}</p>
-                <button id=${book.id} class="delete" onclick="RemoveBook()">Delete</button>      
+                <button id=${book.id} class="delete">Delete</button>      
         `
         div.innerHTML = ui;
 
@@ -54,13 +54,27 @@ Display.prototype.add = function(book) {
 
 }
 
-// Display.prototype.delete = function() {
-// console.log("deleted")
-// }
-
-function RemoveBook(){
-    console.log("Deleted");
+Display.prototype.removeBook = function(e) {
+if(e.classList.contains("delete")){
+    e.parentElement.remove();
 }
+}
+
+Display.prototype.deleteBook = function(targetId) {
+    let tId = targetId;
+    console.log(tId)
+    myLibrary = myLibrary.filter((book)=>{
+        if(book.id === tId) {
+            return false;
+        }else {
+            return true;
+        }
+    })
+
+}
+
+
+
 
 let addBook = document.getElementById("addBook");
 addBook.addEventListener("click", libraryFormSubmit);
@@ -98,5 +112,17 @@ function libraryFormSubmit(e){
 
     display.clear();
 
-    display.add();
+    display.add(); 
 }
+
+//remove book
+
+let library = document.querySelector("#library");
+library.addEventListener("click", (e)=>{
+    let display = new Display();
+ display.removeBook(e.target)
+
+display.deleteBook(e.target.id)
+console.log(myLibrary)
+
+})
