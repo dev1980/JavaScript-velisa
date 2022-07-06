@@ -1,0 +1,44 @@
+ul {
+    background-color: gray;
+    border: 2px solid red;
+    padding: 5px;
+    list-style: none;
+    height: 10vh;
+
+    display: flex;
+   gap:24px;
+   justify-content: center;
+   align-items: center;
+}
+li {
+    border: 2px solid orange;
+    font-size: 24px;
+    /* width: 100%; */
+  
+    
+}
+
+.container {
+    display: flex;
+    gap: 24px;
+    border: 5px solid orange;
+    padding: 5px;
+   
+}
+
+.child {
+    background-color: steelblue;
+    flex: 1;
+    /* width: 100%; */
+}
+
+@media(max-width:750px) {
+    .container {
+        background-color: orange;
+        flex-direction: column;
+        
+    }
+    .child {
+        padding: 15px;
+    }
+}

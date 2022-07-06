@@ -1,0 +1,42 @@
+/* .parent {
+    background-color: snow;
+    display: grid;
+    border: 2px solid red;
+    grid-template-rows:auto 1fr auto;
+    height: 100vh;
+    padding: 12px;
+    gap:24px;
+}
+
+.child {
+    border: 2px solid orange;
+} */
+
+.parent {
+    background-color: snow;
+    display: grid;
+    border: 2px solid red;
+    grid-template-columns: repeat(12, 1fr);
+    height: 100vh;
+    padding: 12px;
+    gap:24px;
+}
+
+.child {
+    border: 2px solid orange;
+    height: 50%;
+}
+
+.child-1 {
+    /* grid-column-start:2;
+    grid-column-end: span 4; */
+
+    grid-column: 2 / span 4;
+}
+
+.child-2 {
+    /* grid-column-start:2;
+    grid-column-end: span 4; */
+
+    grid-column: 6 / span 6;
+}
