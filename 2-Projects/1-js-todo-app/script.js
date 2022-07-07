@@ -36,11 +36,13 @@ if(Array.isArray(savedTodos) || savedTodos.length < 0) {
 
 function createTodo(title, dueDate) {
     let id = "" + new Date().getTime();
-    todos.push({title:title, dueDate: dueDate, id:id})
+    console.log(title, dueDate,id)
+    todos.push({title, dueDate, id})
+    console.log(todos)
     saveTodos()
 }
 
-const removeTodo = (idToDelete) =>{
+function removeTodo(idToDelete){
     todos = todos.filter((todo)=>{
         if(todo.id === idToDelete) {
             return false;
@@ -55,7 +57,7 @@ const removeTodo = (idToDelete) =>{
 
  //local storage
 
- const saveTodos = () =>{
+function saveTodos() {
     localStorage.setItem('todos', JSON.stringify(todos))
  }
 
@@ -64,8 +66,10 @@ const removeTodo = (idToDelete) =>{
  // controller
 
   function addTodo(){
+    console.log("submit")
     let title = document.getElementById("title").value;
     let dueDate = document.getElementById("todo-date").value;
+    console.log(title, dueDate)
     createTodo(title, dueDate);
      render();
   }
