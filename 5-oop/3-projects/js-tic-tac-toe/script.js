@@ -11,6 +11,7 @@ const gameFactory = () => {
     ["", "", ""],
     ["", "", ""],
   ];
+  console.log(boardArray)
   const player = [];
   let turn = 0;
   let status = "pending";
@@ -74,7 +75,7 @@ const gameFactory = () => {
     } else if (boardArray[move[0]][move[1]] === "") {
       boardArray[move[0]][move[1]] = player[turn].getSymbol();
       renderBoard();
-
+console.log(boardArray)
       if (isWinner()) {
         finish("win");
       } else if (isDaraw()) {
