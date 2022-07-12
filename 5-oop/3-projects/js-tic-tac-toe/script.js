@@ -57,14 +57,15 @@ const gameFactory = () => {
   };
 
   const isDaraw = () => {
-    !boardArray.some((line) => line.includes(""));
+return !boardArray.some((line) => line.includes(""))
+    
   };
 
   const finish = (type) => {
     status = "pending";
     if (type === "draw") {
       sendMessage("Game end, its Draw-------");
-    } else {
+    } else if(type === "win") {
       sendMessage(`Game finished, ${player[turn].getName()} won the game`);
     }
   };
@@ -75,7 +76,7 @@ const gameFactory = () => {
     } else if (boardArray[move[0]][move[1]] === "") {
       boardArray[move[0]][move[1]] = player[turn].getSymbol();
       renderBoard();
-console.log(boardArray)
+
       if (isWinner()) {
         finish("win");
       } else if (isDaraw()) {
