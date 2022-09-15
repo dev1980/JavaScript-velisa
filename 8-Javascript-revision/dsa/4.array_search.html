@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Search</title>
+</head>
+<body>
+<input type="text" id="searchEl" placeholder="enter value">
+<button onclick="searchElement()">Search Element</button>
+    
+
+    <script>
+let data = [20,10,40,70,80,90,100,105,203];
+
+// let item = 70;
+// let index = undefined;
+
+// for(let i = 0; i <=data.length-1; i++) {
+//     if(item === data[i]){
+//         index = i;
+//         break;
+//     }
+// }
+
+// console.log(index);
+// console.log(data)
+// let index2 = data.indexOf(100)
+// console.log(index2)
+// data.splice(index2, 1);
+// console.log(data)
+
+
+function searchElement() {
+    console.log(data)
+    let item = document.getElementById("searchEl").value;
+    item = parseInt(item);
+    let index = undefined;
+    for(let i = 0; i <=data.length-1; i++) {
+    if(item === data[i]){
+        index = i;
+        break;
+    }
+}
+console.log(index)
+
+}
+
+    </script>
+    
+</body>
+</html>
