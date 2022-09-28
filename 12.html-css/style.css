@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    /* 1rem = 10px;*/
+}
+
+:root {
+    --primary-color: #000839;
+    --primary-shade:#00020b;
+    --para-color: #80849c;
+    --helper-color: #1264fa;
+    --white-color: #fff;
+    --link-color: #4d5274;
+
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+li {
+    list-style-type: none;
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+    display: inline-block;
+}
+
+h1, h2, h3, h4 {
+    color: var(--primary-color);
+}
+
+.para {
+    font-size: 1.6rem;
+    line-height: 1.7;
+    font-weight: 400;
+    color: var(--para-color);
+}
+
+/* header style */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 100px;
+}
+
+.logo {
+    color: var(--helper-color);
+    font-size: 3.6rem;
+    font-weight: 700;
+}
+
+.navbar-list{
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-link {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--link-color);
+    transition: all 0.3s ease-out;
+    
+}
+
+.navbar-link:hover, .navbar-link:active {
+    color: var(--helper-color);
+}
+
+.btn {
+   background-color: var(--helper-color);
+   color: var(--white-color);
+   padding:1.2rem 3rem;
+   border-radius: 33px;
+}
+
+.btn-download:hover, .btn-download:active{
+    color: var(--helper-color);
+    background-color: var(--white-color);
+}
+
+.menu-icon {
+    font-size: 4rem;
+    font-weight: 700;
+    cursor: pointer;
+
+}
