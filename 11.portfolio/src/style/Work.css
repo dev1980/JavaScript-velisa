@@ -1,0 +1,79 @@
+.project {
+    background-color: #45567D;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.project__title {
+    background-color: #303841;
+    padding: 2rem 0.5rem;
+    margin-top: -6px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.project__title p {
+    display: block;
+    margin-block-start: 1rem;
+    margin-block-end: 1rem;
+    margin-inline-start: 0px;
+    margin-block-end: 0px;
+}
+
+.code {
+    color: #303841;
+    transition: color 0.3s ease-out;
+}
+.project__item:hover  .code {
+    color: #ff7f50;
+    font-weight: 400;
+}
+
+.project__title a svg{
+   margin-top: 20px;
+   font-size: 36px;
+   color: deeppink;
+}
+img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.project__wrapper {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+.project__h1 {
+    text-align: center;
+    margin: 25px 0;
+    font-size: 48px;
+    
+}
+
+.project__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:24px;
+}
+.image {
+    height: 360px;
+}
+
+@media(max-width: 1000px){
+    .project__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 600px){
+    .project__grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .project__h1 {
+       
+        font-size: 26px;
+        
+    }
+}
